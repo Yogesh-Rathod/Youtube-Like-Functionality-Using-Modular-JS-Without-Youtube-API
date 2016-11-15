@@ -1,0 +1,71 @@
+<!doctype html>
+
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Js Youtube</title>
+
+  <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
+  <meta name="description" lang="en" content="">
+
+  <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
+  <meta name="keywords" lang="en" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+
+  <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="flexcontainer col-md-6">
+
+      <div class="big-video">
+        <div class="col-md-12">
+          <a href="javascript:void(0)" class="go-small btn btn-default">Go Small</a>
+        </div>
+        <div class="iframe col-md-12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HkFlM73G-hk" frameborder="0" allowfullscreen onLoad="MODULE.RecentVideos()"></iframe>
+        </div>
+      </div>
+
+      <div class="recently-viewed">
+        <h3>Recently Viewed Videos Local Storage</h3>
+        <ul class="recently-viewed-list"></ul>
+        <h3>Recently Viewed Videos Cookies</h3>
+        <ul class="recently-viewed-cookies"></ul>
+      </div>
+
+    </div>
+    <div class="sidebar col-md-6">
+
+      <div class="item1"><iframe width="560" height="315" src="https://www.youtube.com/embed/m-NYyst_tiY" frameborder="0" allowfullscreen></iframe><span class="iframe-overlay"></span></div>
+      <div class="item2"><iframe width="560" height="315" src="https://www.youtube.com/embed/pOfwp6VlnlM" frameborder="0" allowfullscreen></iframe><span class="iframe-overlay"></span></div>
+      <div class="item3"><iframe width="560" height="315" src="https://www.youtube.com/embed/nQRXi1SVOow" frameborder="0" allowfullscreen></iframe><span class="iframe-overlay"></span></div>
+      <div class="item4"><iframe width="560" height="315" src="https://www.youtube.com/embed/jDhDvnlbr4Q" frameborder="0" allowfullscreen></iframe><span class="iframe-overlay"></span></div>
+      <div class="item5"><iframe width="560" height="315" src="https://www.youtube.com/embed/sWOXYDBbz0g" frameborder="0" allowfullscreen></iframe><span class="iframe-overlay"></span></div>
+
+    </div>
+  </div>
+
+<script src="assets/vendor/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
