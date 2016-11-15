@@ -6,10 +6,12 @@ var MODULE = (function () {
 	var emptyArray = [],
 		Ladedframe = $('.iframe').find('iframe').attr('src');
 
+	// Go Small Button Functionality
 	obj.GoSmall = function() {
 		$('.big-video iframe').addClass('smallerframe');
 	}
 
+	// Play Sidebar Video in Main Video Box
 	obj.playCurrent = function() {
 		var sidebarVideo = $(this).siblings('iframe').attr('src');
 		var playingVideo = $('.big-video iframe').attr('src');
@@ -35,6 +37,7 @@ var MODULE = (function () {
 		}
 	}
 
+	// Operation With LocalStorage and Cookies
 	obj.OperationWithList = function () {
 		// Get Recent Videos From Local Storage
 		var localList = localStorage.getItem('recent'),
