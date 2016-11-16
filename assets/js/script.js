@@ -4,7 +4,7 @@ var MODULE = (function () {
 
 	// Array To store All Recent Viewed Videos
 	var emptyArray = [],
-		Ladedframe = $('.iframe').find('iframe').attr('src');
+			Loadedframe = $('.iframe').find('iframe').attr('src');
 
 	// Go Small Button Functionality
 	obj.GoSmall = function() {
@@ -23,27 +23,31 @@ var MODULE = (function () {
 
 	// Function To set And Get All Recent Viewed Videos
 	obj.RecentVideos = function() {
+		console.log('RecentVideos');
 		var	newIframeSrc = $('.iframe').find('iframe').attr('src');
 
 		emptyArray.push( newIframeSrc );
 		// On Load Do Not Set LocalStorage Or Cookie
-		if ( Ladedframe === newIframeSrc ) {
+		if ( Loadedframe === newIframeSrc ) {
 			// Do Nothing
 		} else {
 			// Store Recent Videos in Local Storage And Cookie
 			localStorage.setItem( "recent", emptyArray );
-			document.cookie = "myCookie" + emptyArray ;
+			document.cookie = "myCookie" + emptyArray;
+			console.log('emptyArray', emptyArray);
 			obj.OperationWithList();
 		}
 	}
 
 	// Operation With LocalStorage and Cookies
 	obj.OperationWithList = function () {
+
 		// Get Recent Videos From Local Storage
 		var localList = localStorage.getItem('recent'),
 				NewlocalList = localList.split(','),
 				CookieList = document.cookie,
-				NewCookieList = CookieList.split(/[ ,]+/);
+				NewCookieList = CookieList.split(/[ ;,]+/);
+				console.log('document.cookie', NewCookieList);
 
 		$('.recently-viewed-list li').remove();
 		$('.recently-viewed-cookies li').remove();
